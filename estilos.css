@@ -1,1 +1,102 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.first-container { 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 12px; 
+  padding: 20px;
+  background-color: #000000;
+  color:#fafafa;
+}
+.first-container img {
+  max-width: 100%;
+  height: auto;
+}
+.header-text {
+  max-width: 600px;
+}
+.rsociales-btn {
+  margin-top: 12px;
+}
+.rsociales-btn button {
+  margin: 5px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+}
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fafafa;
+}
+.card1-container,
+.card2-container,
+.card3-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+  border-radius: 20px;
+}
+.card1-container img,
+.card2-container img,
+.card3-container img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  box-shadow: 1px 1px 3px 2px; /*sombra que nos pidio en el examen, casi lo olvido*/
+}
+.footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 
+.footer a {
+  color: #4fa3ff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr 1fr;
+    text-align: left; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .first-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .first-container img {
+    width: 40%;
+  }
+
+  .header-text {
+    max-width: 55%;
+  }
+  .main-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
